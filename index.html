@@ -12,23 +12,31 @@
   <header>
     <img class="logo" src="./img/Vector.png" alt="logo">
   </header>
+  
   <section class="encriptar">
-    <textarea name="encriptar" id="encriptar" cols="20" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-    <p class="encriptar__mensaje">Solo letras minúsculas y sin acentos</p>
+    <textarea name="mensajeEnviar" id="mensajeEnviar" cols="20" rows="5" placeholder="Ingrese el texto aqui"></textarea>
+    <div class="encriptar__mensaje">
+      <img src="./img/warming.png" alt="Warming">
+      <p class="encriptar__mensaje__texto">Solo letras minúsculas y sin acentos</p>
+    </div>
   </section>
 
   <section class="opciones">
-    <button class="opciones__encriptar">Encriptar</button>
-    <button class="opciones__desencriptar">Desencriptar</button>
+    <button class="opciones__encriptar" id="botonEncriptar">Encriptar</button>
+    <button class="opciones__desencriptar" id="botonDesencriptar">Desencriptar</button>
   </section>
 
   <section class="desencriptar">
-    <p><span>Ningún mensaje fue encontrado</span></p>
-    <p>Ingresa el texto que desees encriptar o desencriptar</p>
-    <button>Copiar</button>
+    <img src="" class="desencriptar__imagen" alt="Persona buscando algo con una lupa">
+    <textarea name="encriptar"  class="desencriptar__respuesta" id="desencriptar__respuesta" cols="20" rows="5" placeholder="Ingrese el texto aqui" disabled>Ningún mensaje fue encontrado</textarea>
+    <p class="desencriptar__subtitulo">Ingresa el texto que desees encriptar o desencriptar</p>
+  <button class="desencriptar__button" id="desencriptar__button" onclick="copiar()">Copiar</button>
+    <!-- <button class="desencriptar__button" id="desencriptar__button">Copiar</button> -->
   </section>
   <footer class="footer">
-    <p>Desarrollado por: Nicolas Botello</p>
+    <p>Desarrollado por: Ingeniero Nicolas Botello</p>
   </footer>
+  <script src="./js/encriptador.js"></script>	
+  <script src="./js/desencriptar.js"></script>	
 </body>
 </html>
