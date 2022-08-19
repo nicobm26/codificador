@@ -1,0 +1,128 @@
+:root{
+  --backgroundColor: #F3F5FC;
+  --white: #ffffff;
+  --mensajeNormal: #0A3871;
+  --mensajeEncriptado: #495057;
+  --boton-encriptar: #0A3871;
+  --dark--grey:#495057;
+}
+body{
+  background-color: var(--backgroundColor);
+  display: grid;
+}
+
+.encriptar{
+  display: flex;
+  flex-direction: column;
+}
+
+.logo{
+  height: 40px;
+  width: 32px;
+  margin-left: 16px;
+  margin-top: 24px;
+  border-radius: 0px;
+}
+
+.encriptar textarea{
+  width: calc(85%);
+  margin: 0 auto;
+  background-color: inherit;
+  border: none;
+  margin: 30px auto 0 auto;
+}
+.encriptar textarea::placeholder{
+  color: var(--mensajeNormal);
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+
+.encriptar__mensaje{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin: 0 auto; /*nueva*/
+}
+
+.encriptar__mensaje__texto{
+  height: 16px;
+  font-size: 12px;
+  color: var(--dark--grey);
+  margin-left: 6px;
+}
+
+.encriptar__mensaje img{ 
+  width: 16px;
+  height: 16px; 
+  background-image: url('../img/warming.png');
+}
+
+.opciones{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self:center;
+}
+
+.opciones__encriptar, .opciones__desencriptar{
+  height: 45px;
+  width: 300px;
+  border-radius: 24px;
+  /* padding: 24px; */
+  font-size: 16px;
+  margin: 0 auto; /*nueva*/
+}
+.opciones__encriptar{
+  /* margin-bottom: 0.9rem; */
+  background-color: var(--boton-encriptar);
+  color: var(--white);
+}
+/* .encriptar{
+  display: grid;
+} */
+
+.desencriptar{
+  width: calc(90%);
+  margin: 15px auto 0 auto;
+  display: flex;
+  background-color: var(--white);
+  border-radius: 32px;
+  flex-direction: column;
+  text-align: center;
+}
+.desencriptar__respuesta {
+  margin: 0;
+  height: 90px;
+  padding-top: 15px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #343A40;
+  text-align: center;
+  background-color: var(--backgroundColor);    
+  border: none;
+}
+.desencriptar__subtitulo {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 16px;
+  background-color: var(--backgroundColor);  
+}
+
+.desencriptar__imagen{
+  display: none;
+}
+
+.desencriptar__button{
+  display: none;
+}
+
+.footer{
+  position: relative;
+  /* bottom: 10px; */
+  top: calc(90%);
+}
+.footer p{
+  margin: 0;
+  text-align: center;
+}
