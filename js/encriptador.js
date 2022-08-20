@@ -1,4 +1,24 @@
-// let botonEncriptar = document.querySelector("#botonEncriptar")
+function mostrar(mensajeEsperado){
+  if(mensajeEsperado.length > 0){
+     let mensaje_mostrar = document.querySelector("#desencriptar__respuesta");
+     let mensaje_ignorar = document.querySelector(".desencriptar__subtitulo");
+     mensaje_ignorar.style.display = "none"
+     mensaje_mostrar.textContent = mensajeEsperado;
+ 
+     //Habilitar el boton de copiar 
+     let copiar = document.querySelector("#desencriptar__button");
+     let btcopiar2 = document.querySelector("#desencriptar__button2");
+     let btcopiar3 = document.querySelector("#desencriptar__button3");
+     copiar.style.display = "unset";
+     let imagen = document.querySelector(".desencriptar__imagen");
+     imagen.style.display = "none";
+     
+    //  btcopiar2.style.color = "red";
+    //  btcopiar2.style.display = "unset";
+    //  btcopiar3.style.display = "unset";
+   }
+ }
+
 let texto = document.querySelector("#mensajeEnviar");
 console.log(texto.value);
 
@@ -38,39 +58,6 @@ function encriptar(word){
   mostrar(word_encriptada);
 }
 
-function mostrar(mensajeEsperado){
- if(mensajeEsperado.length > 0){
-    let mensaje_mostrar = document.querySelector("#desencriptar__respuesta");
-    let mensaje_ignorar = document.querySelector(".desencriptar__subtitulo");
-    mensaje_ignorar.style.display = "none"
-    mensaje_mostrar.textContent = mensajeEsperado;
-
-    let copiar = document.querySelector("#desencriptar__button");
-    copiar.style.display = "unset";
-    copiar.style.color = "red";
-    // copiar.addEventListener("click",copiar)
-    // copiar.addEventListener("click" , ()=> copiar )  //No sirve
-    //console.log(copiar)
-  }
-  return mensajeEsperado;
-}
-
-function copiar(){
-  console.log("entre a copiar bro")
-   /* Get the text field */
-   var copyText = document.querySelector("#desencriptar__respuesta");
-
-   /* Select the text field */
-   copyText.select();
-   copyText.setSelectionRange(0, 99999); /* For mobile devices */
- 
-    /* Copy the text inside the text field */
-   navigator.clipboard.writeText(copyText.value);
- 
-   /* Alert the copied text */
-   alert("Copied the text: " + copyText.value);
-}
-
 texto.addEventListener('input', updateValue);
 function updateValue(){
   //console.log(texto.value)
@@ -81,5 +68,11 @@ function updateValue(){
     let mensaje_ignorar = document.querySelector(".desencriptar p:nth-child(3)");
     mensaje_ignorar.textContent = "Ingresa el texto que desees encriptar o desencriptar"
     mensaje_ignorar.style.display = ""
+    let copiar = document.querySelector("#desencriptar__button");
+    copiar.style.display = "none";
+    if(screen.width >= 1024){
+      let imagen = document.querySelector(".desencriptar__imagen");
+      imagen.style.display = "initial";
+    }
   }
 }
