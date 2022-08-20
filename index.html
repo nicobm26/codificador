@@ -12,31 +12,38 @@
   <header>
     <img class="logo" src="./img/Vector.png" alt="logo">
   </header>
-  
-  <section class="encriptar">
-    <textarea name="mensajeEnviar" id="mensajeEnviar" cols="20" rows="5" placeholder="Ingrese el texto aqui"></textarea>
-    <div class="encriptar__mensaje">
-      <img src="./img/warming.png" alt="Warming">
-      <p class="encriptar__mensaje__texto">Solo letras minúsculas y sin acentos</p>
+  <div class="cuerpo">
+    <div class="parte__izquierda">
+      <section class="encriptar">
+        <textarea name="mensajeEnviar" id="mensajeEnviar" cols="20" rows="5" placeholder="Ingrese el texto aqui"></textarea>
+        <div class="encriptar__mensaje">
+          <img src="./img/warming.png" alt="Warming">
+          <p class="encriptar__mensaje__texto">Solo letras minúsculas y sin acentos</p>
+        </div>
+      </section>
+
+      <section class="opciones">
+        <button class="opciones__encriptar" id="botonEncriptar">Encriptar</button>
+        <button class="opciones__desencriptar" id="botonDesencriptar">Desencriptar</button>
+      </section>
     </div>
-  </section>
 
-  <section class="opciones">
-    <button class="opciones__encriptar" id="botonEncriptar">Encriptar</button>
-    <button class="opciones__desencriptar" id="botonDesencriptar">Desencriptar</button>
-  </section>
-
-  <section class="desencriptar">
-    <img src="" class="desencriptar__imagen" alt="Persona buscando algo con una lupa">
-    <textarea name="encriptar"  class="desencriptar__respuesta" id="desencriptar__respuesta" cols="20" rows="5" placeholder="Ingrese el texto aqui" disabled>Ningún mensaje fue encontrado</textarea>
-    <p class="desencriptar__subtitulo">Ingresa el texto que desees encriptar o desencriptar</p>
-  <button class="desencriptar__button" id="desencriptar__button" onclick="copiar()">Copiar</button>
-    <!-- <button class="desencriptar__button" id="desencriptar__button">Copiar</button> -->
-  </section>
+    <div class="parte__derecha">
+      <section class="desencriptar">
+        <img src="./img/Muneco.png" class="desencriptar__imagen" alt="Persona buscando algo con una lupa">
+        <textarea name="encriptar"  class="desencriptar__respuesta" id="desencriptar__respuesta" cols="20" rows="5" placeholder="Ingrese el texto aqui" disabled>Ningún mensaje fue encontrado</textarea>
+        <p class="desencriptar__subtitulo">Ingresa el texto que desees encriptar o desencriptar</p>
+      <button class="desencriptar__button" id="desencriptar__button" onclick="copiar()">Copiar</button>
+      <button class="desencriptar__button" id="desencriptar__button2">Copiar2</button>
+      <button class="desencriptar__button" id="desencriptar__button3">Copiar3</button>
+      </section>
+    </div>
+  </div>
   <footer class="footer">
     <p>Desarrollado por: Ingeniero Nicolas Botello</p>
   </footer>
   <script src="./js/encriptador.js"></script>	
   <script src="./js/desencriptar.js"></script>	
+  <script src="./js/copiar.js"></script>	
 </body>
 </html>
