@@ -1,20 +1,25 @@
 :root{
   --backgroundColor: #F3F5FC;
-  
   --white: #ffffff;
   --mensajeNormal: #0A3871;
   --mensajeEncriptado: #495057;
   --boton-encriptar: #0A3871;
   --dark--grey:#495057;
 }
+*{
+  margin: 0;
+}
 body{
   background-color: var(--backgroundColor);
   display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .encriptar{
   display: flex;
   flex-direction: column;
+  margin-bottom: 5px;
 }
 
 .logo{
@@ -31,8 +36,8 @@ body{
   background-color: inherit;
   border: none;
   margin: 30px auto 0 auto;
-  /* font-size: 20px;
-  height: 80px; */
+  font-size: 20px;
+  /* height: 80px; */ 
 }
 .encriptar textarea::placeholder{
   color: var(--mensajeNormal);
@@ -85,6 +90,7 @@ body{
 
 .desencriptar{
   width: calc(90%);
+  height: 90%;
   margin: 15px auto 0 auto;
   display: flex;
   background-color: var(--white);
@@ -103,6 +109,7 @@ body{
   text-align: center;    
   background-color: var(--white);
   border: none;
+  margin-bottom: 20px;
 }
 .desencriptar__subtitulo {
   margin: 0;
@@ -124,14 +131,14 @@ body{
 }
 
 
-.footer{
-  position: absolute;
-  display: flex;
-  bottom: 5px;
-  justify-self: center;
+.footer {
+  margin: 0;  /*Formateando, ya que por defecto viene con 16px de margin*/
+  background-color: #0A3871;
+  color: white;
+  padding: 20px;
 }
 .footer p{
-  margin: 0;  /*Formateando, ya que por defecto viene con 16px de margin*/
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -168,9 +175,6 @@ body{
     justify-content: space-around;
     justify-content: center;
   }
-  .desencriptar{
-    height: 110%;
-  }
   .desencriptar__imagen{
     display: initial;
     height: 230px;
@@ -184,8 +188,4 @@ body{
     text-align: left;
   }
 
-  .parte__derecha{
-    position: relative;
-    top: -60px;
-  }
 }
